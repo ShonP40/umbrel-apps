@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: $APP_ESPHOME_IP
+      APP_PORT: 6052
+
+  server:
+    image: esphome/esphome:2022.11.1
+    volumes:
+      - ${APP_DATA_DIR}/data:/config
+    networks:
+      default:
+        ipv4_address: $APP_ESPHOME_IP
+    restart: on-failure
+    devices:
+       - /dev:/dev
+    device_cgroup_rules:
+       - 'c 188:* rmw'

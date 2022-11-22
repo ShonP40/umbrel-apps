@@ -1,0 +1,27 @@
+manifestVersion: 1
+id: shonp40-esphome
+category: Automation
+name: ESPHome
+version: "2022.11.1"
+tagline: Intelligently manage all your ESP8266/ESP32 devices
+description: >-
+  ESPHome is a system to control your ESP8266/ESP32 by simple yet powerful configuration files and control them remotely through Home Automation systems.
+developer: ESPHome
+website: https://esphome.io
+dependencies: []
+repo: https://github.com/esphome/esphome
+support: https://github.com/esphome/issues
+port: 6052
+icon: https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-esphome/assets/icon.svg
+gallery:
+  - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-esphome/assets/1.jpg
+  - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-esphome/assets/2.jpg
+  - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-esphome/assets/3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+torOnly: false
+releaseNotes: >-
+  Full changelog can found at: https://esphome.io/changelog/2022.11.0
+submitter: ShonP40
+submission: https://github.com/ShonP40/umbrel-apps/tree/master/shonp40-esphome
