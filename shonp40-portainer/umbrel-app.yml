@@ -1,0 +1,27 @@
+manifestVersion: 1
+id: shonp40-portainer
+category: Management
+name: Portainer
+version: "2.16.2"
+tagline: Deploy, configure, troubleshoot and secure containers in minutes
+description: >-
+  Portainer is a simple GUI for Docker that allows you to deploy, configure, troubleshoot and secure containers in minutes.
+developer: Portainer
+website: https://www.portainer.io
+dependencies: []
+repo: https://github.com/portainer/portainer
+support: https://github.com/portainer/portainer/issues
+port: 9000
+icon: https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-portainer/assets/icon.svg
+gallery:
+  - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-portainer/assets/1.jpg
+  - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-portainer/assets/2.jpg
+  - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-portainer/assets/3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+torOnly: false
+releaseNotes: >-
+  Full changelog can found at: https://github.com/portainer/portainer/releases/tag/2.16.2
+submitter: ShonP40
+submission: https://github.com/ShonP40/umbrel-apps/tree/master/shonp40-portainer
