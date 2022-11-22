@@ -3,7 +3,7 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: shonp40-home-assistant
+      APP_HOST: $APP_HOME_ASSISTANT_IP
       APP_PORT: 8123
       PROXY_AUTH_ADD: "false"
 
