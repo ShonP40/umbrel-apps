@@ -19,11 +19,11 @@ dependencies: []
 repo: https://github.com/home-assistant/core
 support: https://community.home-assistant.io
 port: 8123
-icon: https://umbrel.shon.codes/home-assistant/assets/icon.svg
+icon: https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/home-assistant/assets/icon.svg
 gallery:
-  - https://umbrel.shon.codes/home-assistant/assets/1.jpg
-  - https://umbrel.shon.codes/home-assistant/assets/2.jpg
-  - https://umbrel.shon.codes/home-assistant/assets/3.jpg
+  - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/home-assistant/assets/1.jpg
+  - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/home-assistant/assets/2.jpg
+  - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/home-assistant/assets/3.jpg
 path: ""
 defaultUsername: ""
 defaultPassword: ""
