@@ -2,7 +2,7 @@ manifestVersion: 1
 id: shonp40-home-assistant
 category: Automation
 name: Home Assistant
-version: "2022.11.2"
+version: "2022.11.4"
 tagline: Home automation that puts local control & privacy first
 description: >-
   Open source home automation that puts local control and privacy
