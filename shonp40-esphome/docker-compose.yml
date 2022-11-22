@@ -10,11 +10,10 @@ services:
     image: esphome/esphome:2022.11.1
     volumes:
       - ${APP_DATA_DIR}/data:/config
+      - "/dev:/dev"
     networks:
       default:
         ipv4_address: $APP_ESPHOME_IP
     restart: on-failure
-    devices:
-       - "/dev/ttyUSB0:/dev/ttyUSB0"
     device_cgroup_rules:
        - 'c 188:* rmw'
