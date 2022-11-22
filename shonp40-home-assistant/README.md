@@ -9,4 +9,4 @@ http:
     - 10.21.0.0/16
 ```
 
-The official Umbrel repo changes your `configuration.yaml` file location and can sometimes overwrite it between updates, which is why you'll need to set it manually here
+The official Umbrel repo changes your `configuration.yaml` file location and can sometimes overwrite it between updates/reboots, which is why you'll need to set it manually here
