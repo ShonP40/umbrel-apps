@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  app_proxy:
+      environment:
+        APP_HOST: $APP_OPENSPEEDTEST_IP
+        APP_PORT: 3000
+
+  server:
+    image: openspeedtest/latest
+    networks:
+      default:
+        ipv4_address: $APP_OPENSPEEDTEST_IP
+    restart: on-failure

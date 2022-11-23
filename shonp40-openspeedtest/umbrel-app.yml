@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: shonp40-openspeedtest
+category: Networking
+name: OpenSpeedTest
+version: "2.5.3"
+tagline: Free & Open-Source HTML5 Network Performance Estimation Tool
+description: >-
+  OpenSpeedTest is a Free and Open-Source HTML5 Network Performance Estimation Tool Written in Vanilla Javascript and only uses built-in Web APIs like XMLHttpRequest (XHR), HTML, CSS, JS, & SVG.
+developer: OpenSpeedTest
+website: https://openspeedtest.com
+dependencies: []
+repo: https://github.com/openspeedtest/Speed-Test
+support: https://github.com/openspeedtest/Speed-Test/issues
+port: 3000
+icon: https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-openspeedtest/assets/icon.svg
+gallery:
+  - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-openspeedtest/assets/1.jpg
+  - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-openspeedtest/assets/2.jpg
+  - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-openspeedtest/assets/3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+torOnly: false
+submitter: ShonP40
+submission: https://github.com/ShonP40/umbrel-apps/tree/master/shonp40-openspeedtest
