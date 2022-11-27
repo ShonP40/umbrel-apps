@@ -5,11 +5,16 @@ services:
       environment:
         APP_HOST: $APP_OPENSPEEDTEST_IP
         APP_PORT: 3000
-        PROXY_AUTH_ADD: "false"
 
   server:
     image: openspeedtest/latest
     networks:
       default:
         ipv4_address: $APP_OPENSPEEDTEST_IP
+    labels:
+      - traefik.enable: 'true'
+      - traefik.http.middlewares.limit.buffering.maxRequestBodyBytes: 10000000000
+      - traefik.http.routers.openspeedtest.entrypoints: web
+      - traefik.http.routers.openspeedtest.middlewares: limit
+      - traefik.http.routers.openspeedtest.rule: Host(`${APP_OPENSPEEDTEST_IP}`)
     restart: on-failure
