@@ -1,10 +1,10 @@
+name: Auto Update Portainer
+
 env:
   URL: https://api.github.com/repos/portainer/portainer/releases/latest
   ID: portainer
   NAME: Portainer
   DOCKER: portainer/portainer-ce
-
-name: Auto update ${{ env.NAME }}
 
 on:
   schedule:

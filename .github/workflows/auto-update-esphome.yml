@@ -1,10 +1,10 @@
+name: Auto Update ESPHome
+
 env:
   URL: https://api.github.com/repos/esphome/esphome/releases/latest
   ID: esphome
   NAME: ESPHome
   DOCKER: esphome/esphome
-
-name: Auto update ${{ env.NAME }}
 
 on:
   schedule:

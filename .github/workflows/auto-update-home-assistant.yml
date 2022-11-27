@@ -1,10 +1,10 @@
+name: Auto Update Home Assistant
+
 env:
   URL: https://api.github.com/repos/home-assistant/core/releases/latest
   ID: home-assistant
   NAME: Home Assistant
   DOCKER: homeassistant/home-assistant
-
-name: Auto update ${{ env.NAME }}
 
 on:
   schedule:
