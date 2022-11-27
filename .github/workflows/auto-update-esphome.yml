@@ -5,6 +5,7 @@ env:
   ID: esphome
   NAME: ESPHome
   DOCKER: esphome/esphome
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
 on:
   schedule:

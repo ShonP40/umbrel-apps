@@ -5,6 +5,7 @@ env:
   ID: portainer
   NAME: Portainer
   DOCKER: portainer/portainer-ce
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
 on:
   schedule:

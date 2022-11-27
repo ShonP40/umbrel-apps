@@ -5,6 +5,7 @@ env:
   ID: home-assistant
   NAME: Home Assistant
   DOCKER: homeassistant/home-assistant
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
 on:
   schedule:

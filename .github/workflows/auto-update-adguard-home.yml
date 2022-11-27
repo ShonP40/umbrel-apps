@@ -5,6 +5,7 @@ env:
   ID: adguard-home
   NAME: AdGuard Home
   DOCKER: adguard/adguardhome
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
 on:
   schedule:
