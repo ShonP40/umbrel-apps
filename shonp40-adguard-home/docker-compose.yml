@@ -1,0 +1,37 @@
+version: "3.7"
+
+services:
+  app_proxy:
+      environment:
+        APP_HOST: $APP_ADGUARD_HOME_IP
+        APP_PORT: 3000
+        PROXY_AUTH_ADD: "false"
+
+  server:
+    image: adguard/adguardhome:v0.107.19
+    ports:
+      # Plain DNS
+      - 53:53/tcp
+      - 53:53/udp
+      # DNS-over-QUIC
+      - 784:784/udp
+      - 853:853/tcp
+      - 8853:8853/udp
+      # DHCP
+      - 67:67/udp
+      - 68:68/tcp
+      - 68:68/udp
+      # DNSCrypt
+      - 5443:5443/tcp
+      - 5443:5443/udp
+      # Web UI - configured above
+      # - 3000:3000/tcp
+      # - 80:80/tcp
+      # - 443:443/tcp
+    volumes:
+      - ${APP_DATA_DIR}/data/work:/opt/adguardhome/work
+      - ${APP_DATA_DIR}/data/conf:/opt/adguardhome/conf
+    networks:
+      default:
+        ipv4_address: $APP_ADGUARD_HOME_IP
+    restart: on-failure

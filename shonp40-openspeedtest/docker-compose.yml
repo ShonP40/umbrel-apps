@@ -4,10 +4,12 @@ services:
   app_proxy:
       environment:
         APP_HOST: $APP_OPENSPEEDTEST_IP
-        APP_PORT: 3000
+        APP_PORT: 3001
 
   server:
     image: openspeedtest/latest
+    ports:
+      - 3001:3000/tcp
     networks:
       default:
         ipv4_address: $APP_OPENSPEEDTEST_IP
