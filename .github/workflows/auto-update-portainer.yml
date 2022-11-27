@@ -33,7 +33,7 @@ jobs:
           changes: |
             {
               "shonp40-${{ env.ID }}/umbrel-app.yml": {
-                "version": ${{ env.LATEST }}"
+                "version": "${{ env.LATEST }}"
               },
               "shonp40-${{ env.ID }}/docker-compose.yml": {
                 "services.server.image": "${{ env.DOCKER }}:${{ env.LATEST }}"
