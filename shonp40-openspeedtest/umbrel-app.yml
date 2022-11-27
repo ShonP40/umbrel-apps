@@ -12,7 +12,7 @@ dependencies: []
 repo: https://github.com/openspeedtest/Speed-Test
 support: https://github.com/openspeedtest/Speed-Test/issues
 port: 3001
-icon: https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-openspeedtest/assets/icon.svg
+icon: https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-openspeedtest/assets/icon.jpg
 gallery:
   - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-openspeedtest/assets/1.jpg
   - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-openspeedtest/assets/2.jpg
