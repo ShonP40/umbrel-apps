@@ -2,10 +2,9 @@ manifestVersion: 1
 id: shonp40-adguard-home
 category: Networking
 name: AdGuard Home
-version: "0.107.19"
+version: v0.107.19
 tagline: Free and open source, powerful network-wide ads & trackers blocking DNS server.
-description: >-
-  AdGuard Home is a network-wide software for blocking ads and tracking. After you set it up, it'll cover ALL your home devices, and you don't need any client-side software for that.
+description: AdGuard Home is a network-wide software for blocking ads and tracking. After you set it up, it'll cover ALL your home devices, and you don't need any client-side software for that.
 developer: AdGuard
 website: https://adguard.com/adguard-home.html
 dependencies: []
@@ -17,11 +16,10 @@ gallery:
   - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-adguard-home/assets/1.jpg
   - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-adguard-home/assets/2.jpg
   - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-adguard-home/assets/3.jpg
-path: ""
-defaultUsername: ""
-defaultPassword: ""
+path: ''
+defaultUsername: ''
+defaultPassword: ''
 torOnly: false
-releaseNotes: >-
-  Full changelog can found at: https://github.com/AdguardTeam/AdGuardHome/releases
+releaseNotes: 'Full changelog can found at: https://github.com/AdguardTeam/AdGuardHome/releases'
 submitter: ShonP40
 submission: https://github.com/ShonP40/umbrel-apps/tree/master/shonp40-adguard-home
