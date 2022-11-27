@@ -22,6 +22,6 @@ defaultUsername: ""
 defaultPassword: ""
 torOnly: false
 releaseNotes: >-
-  Full changelog can found at: https://github.com/portainer/portainer/releases/tag/2.16.2
+  Full changelog can found at: https://github.com/portainer/portainer/releases
 submitter: ShonP40
 submission: https://github.com/ShonP40/umbrel-apps/tree/master/shonp40-portainer

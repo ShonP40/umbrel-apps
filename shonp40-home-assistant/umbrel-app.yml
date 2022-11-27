@@ -29,6 +29,6 @@ defaultUsername: ""
 defaultPassword: ""
 torOnly: false
 releaseNotes: >-
-  Full changelog can found at: https://home-assistant.io/changelogs/core-2022.11
+  Full changelog can found at: https://home-assistant.io/changelogs
 submitter: ShonP40
 submission: https://github.com/ShonP40/umbrel-apps/tree/master/shonp40-home-assistant
