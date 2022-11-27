@@ -20,27 +20,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Fetch the latest version
         run: |
           export LATEST=$(curl -sL ${{ env.URL }} | jq -r ".tag_name")
           echo "::set-env name=LATEST::$LATEST"
 
-      - name: Update docker-compose
-        uses: fjogeleit/yaml-update-action@main
-        with:
-          valueFile: 'shonp40-${{ env.ID }}/docker-compose.yml'
-          propertyPath: 'services.server.image'
-          value: ${{ env.DOCKER }}:${{ env.LATEST }}
-
       - name: Update the version
         uses: fjogeleit/yaml-update-action@main
         with:
           valueFile: 'shonp40-${{ env.ID }}/umbrel-app.yml'
-          propertyPath: 'version'
-          value: ${{ env.LATEST }}
+          changes: |
+            {
+              "shonp40-${{ env.ID }}/umbrel-app.yml": {
+                "version": ${{ env.LATEST }}"
+              },
+              "shonp40-${{ env.ID }}/docker-compose.yml": {
+                "services.server.image": "${{ env.DOCKER }}:${{ env.LATEST }}"
+              }
+            }
           commitChange: true
           branch: master
           message: 'Updated ${{ env.NAME }} to ${{ env.LATEST }}'
