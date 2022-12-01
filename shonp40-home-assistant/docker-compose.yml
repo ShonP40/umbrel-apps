@@ -1,14 +1,12 @@
-version: "3.7"
-
+version: '3.7'
 services:
   app_proxy:
     environment:
       APP_HOST: $APP_HOME_ASSISTANT_IP
       APP_PORT: 8123
-      PROXY_AUTH_ADD: "false"
-
+      PROXY_AUTH_ADD: 'false'
   server:
-    image: homeassistant/home-assistant:2022.11.4
+    image: homeassistant/home-assistant:2022.11.5
     volumes:
       - ${APP_DATA_DIR}/data:/config
       - /run/dbus:/run/dbus:ro
