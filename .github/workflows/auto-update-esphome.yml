@@ -28,7 +28,7 @@ jobs:
 
       - name: Update the version
         uses: fjogeleit/yaml-update-action@main
-        if: ${{ env.LATEST }} != null
+        if: ${{ env.LATEST != 'null' }}
         with:
           valueFile: 'shonp40-${{ env.ID }}/umbrel-app.yml'
           changes: |
