@@ -8,13 +8,13 @@ services:
   server:
     image: adguard/adguardhome:v0.107.22
     ports:
-      - 53:53/tcp
-      - 53:53/udp
-      - 784:784/udp
-      - 853:853/tcp
-      - 8853:8853/udp
-      - 5443:5443/tcp
-      - 5443:5443/udp
+      - 67:67/tcp
+      - 93:93/udp
+      - 345:345/udp
+      - 345:345/tcp
+      - 9900:9900/udp
+      - 5678:5678/tcp
+      - 9878:9878/udp
     volumes:
       - ${APP_DATA_DIR}/data/work:/opt/adguardhome/work
       - ${APP_DATA_DIR}/data/conf:/opt/adguardhome/conf
