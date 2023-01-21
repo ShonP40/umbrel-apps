@@ -10,7 +10,7 @@ website: https://adguard.com/adguard-home.html
 dependencies: []
 repo: https://github.com/AdguardTeam/AdGuardHome
 support: https://github.com/AdguardTeam/AdGuardHome/issues
-port: 3000
+port: 3498
 icon: https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-adguard-home/assets/icon.svg
 gallery:
   - https://raw.githubusercontent.com/ShonP40/umbrel-apps/master/shonp40-adguard-home/assets/1.jpg
