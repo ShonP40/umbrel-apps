@@ -3,7 +3,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: $APP_ADGUARD_HOME_IP
-      APP_PORT: 3000
+      APP_PORT: 3498
       PROXY_AUTH_ADD: 'false'
   server:
     image: adguard/adguardhome:v0.107.22
