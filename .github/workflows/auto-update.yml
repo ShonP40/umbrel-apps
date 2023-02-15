@@ -46,12 +46,12 @@ jobs:
             - name: Fetch the latest version
               id: get_latest
               if: steps.check_files.outputs.files_exists == 'true'
-              run: echo "latest=$(curl -sL ${{ env.URL }} | jq -r ".tag_name")" >> $GITHUB_OUTPUT
+              run: echo "latest=$(curl -sL https://api.github.com/repos/${{ env.GITHUB }}/releases/latest | jq -r ".tag_name")" >> $GITHUB_OUTPUT
             
             - name: Fetch the latest digest
               id: get_hash
               if: ${{ steps.get_latest.outputs.latest != 'null' && steps.check_files.outputs.files_exists == 'true' }}
-              run: echo "hash=$(curl https://hub.docker.com/v2/repositories/${{ env.DOCKER }}/tags/${{ steps.get_latest.outputs.latest }} | jq -r .digest)" >> $GITHUB_OUTPUT
+              run: echo "hash=$(curl -sL https://hub.docker.com/v2/repositories/${{ env.DOCKER }}/tags/${{ steps.get_latest.outputs.latest }} | jq -r .digest)" >> $GITHUB_OUTPUT
 
             - name: Update the version
               uses: fjogeleit/yaml-update-action@main
