@@ -50,7 +50,7 @@ jobs:
 
             - name: Update the version
               uses: fjogeleit/yaml-update-action@main
-              if: ${{ steps.get_latest.outputs.latest != '' && steps.check_files.outputs.files_exists == 'true' }}
+              if: ${{ steps.get_latest.outputs.latest != 'null' && steps.check_files.outputs.files_exists == 'true' }}
               with:
                 valueFile: 'shonp40-${{ env.ID }}/umbrel-app.yml'
                 changes: |
