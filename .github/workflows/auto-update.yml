@@ -1,0 +1,61 @@
+name: Auto Updater
+
+env:
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+    generateInputPaths:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v3
+        - name: Generate matrix with all the apps in this repo
+            id: set-matrix
+            run: |
+            echo "::set-output name=matrix::$(ls -l | grep '^d' | awk -F ' ' '{print $9}' | grep -Po '\d{3}.*' | jq -R -s -c 'split("\n") | map(select(length > 0))')"
+        outputs:
+        matrix: ${{ steps.set-matrix.outputs.matrix }}
+
+    update:
+        needs: generateInputPaths
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                path: ${{ fromJson(needs.generateInputPaths.outputs.matrix) }}
+
+        steps:
+        - uses: actions/checkout@v3
+        
+        - name: Load .env file
+          uses: xom9ikk/dotenv@v2
+          with:
+            path: ${{ github.workspace }}/${{ matrix.inputPath }}
+            load-mode: strict
+
+        - name: Fetch the latest version
+          run: |
+            export LATEST=$(curl -sL ${{ env.URL }} | jq -r ".tag_name")
+            echo "::set-env name=LATEST::$LATEST"
+
+        - name: Update the version
+          uses: fjogeleit/yaml-update-action@main
+          if: ${{ env.LATEST != 'null' }}
+          with:
+            valueFile: 'shonp40-${{ env.ID }}/umbrel-app.yml'
+            changes: |
+                {
+                    "shonp40-${{ env.ID }}/umbrel-app.yml": {
+                        "version": "${{ env.LATEST }}"
+                    },
+                    "shonp40-${{ env.ID }}/docker-compose.yml": {
+                        "services.server.image": "${{ env.DOCKER }}:${{ env.LATEST }}"
+                    }
+                }
+            commitChange: true
+            branch: master
+            message: 'Updated ${{ env.NAME }} to ${{ env.LATEST }}'
