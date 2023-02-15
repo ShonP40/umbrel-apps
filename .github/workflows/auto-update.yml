@@ -17,9 +17,6 @@ jobs:
             - name: Generate matrix with all the apps in this repo
               id: set-matrix
               run: echo "::set-output name=matrix::$(ls -d ./*/ | jq --raw-input --slurp --compact-output 'split("\n")[:-1]')"
-            
-            - name: debug
-              run: echo ${{ steps.set-matrix.outputs.matrix }}
         outputs:
             matrix: ${{ steps.set-matrix.outputs.matrix }}
 
@@ -38,7 +35,6 @@ jobs:
               uses: xom9ikk/dotenv@v2
               with:
                 path: ${{ github.workspace }}/${{ matrix.path }}
-                load-mode: strict
 
             - name: Fetch the latest version
               run: |
