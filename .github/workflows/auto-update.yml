@@ -10,6 +10,7 @@ on:
 
 jobs:
     generateInputPaths:
+        name: List all app folders
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
