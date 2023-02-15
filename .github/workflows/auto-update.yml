@@ -17,7 +17,7 @@ jobs:
 
             - name: Generate matrix with all the apps in this repo
               id: set-matrix
-              run: echo "::set-output name=matrix::$(ls -d ./*/ | jq --raw-input --slurp --compact-output 'split("\n")[:-1]')"
+              run: echo "name=matrix::$(ls -d ./*/ | jq --raw-input --slurp --compact-output 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
         outputs:
             matrix: ${{ steps.set-matrix.outputs.matrix }}
 
