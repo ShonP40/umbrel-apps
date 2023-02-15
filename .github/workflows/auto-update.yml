@@ -51,9 +51,8 @@ jobs:
                 echo "::set-env name=LATEST::$LATEST"
 
             - name: Update the version
-              if: steps.check_files.outputs.files_exists == 'true'
               uses: fjogeleit/yaml-update-action@main
-              if: ${{ env.LATEST != 'null' }}
+              if: ${{ env.LATEST != 'null' }} && steps.check_files.outputs.files_exists == 'true'
               with:
                 valueFile: 'shonp40-${{ env.ID }}/umbrel-app.yml'
                 changes: |
