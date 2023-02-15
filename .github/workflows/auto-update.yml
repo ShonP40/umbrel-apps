@@ -55,12 +55,12 @@ jobs:
                 changes: |
                     {
                         "shonp40-${{ env.ID }}/umbrel-app.yml": {
-                            "version": "${{ env.LATEST }}"
+                            "version": "${{ steps.get_latest.outputs.latest }}"
                         },
                         "shonp40-${{ env.ID }}/docker-compose.yml": {
-                            "services.server.image": "${{ env.DOCKER }}:${{ env.LATEST }}"
+                            "services.server.image": "${{ env.DOCKER }}:${{ steps.get_latest.outputs.latest }}"
                         }
                     }
                 commitChange: true
                 branch: master
-                message: 'Updated ${{ env.NAME }} to ${{ env.LATEST }}'
+                message: 'Updated ${{ env.NAME }} to ${{ steps.get_latest.outputs.latest }}'
