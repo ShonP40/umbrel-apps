@@ -1,8 +1,5 @@
 name: Auto Updater
 
-env:
-  ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
-
 on:
   schedule:
     - cron: '0 0 * * *'
@@ -46,14 +43,13 @@ jobs:
                 path: ${{ github.workspace }}/${{ matrix.path }}
 
             - name: Fetch the latest version
+              id: get_latest
               if: steps.check_files.outputs.files_exists == 'true'
-              run: |
-                export LATEST=$(curl -sL ${{ env.URL }} | jq -r ".tag_name")
-                echo "::set-env name=LATEST::$LATEST"
+              run: echo "latest=$(curl -sL ${{ env.URL }} | jq -r ".tag_name")" >> $GITHUB_OUTPUT
 
             - name: Update the version
               uses: fjogeleit/yaml-update-action@main
-              if: ${{ env.LATEST != 'null' && steps.check_files.outputs.files_exists == 'true' }}
+              if: ${{ steps.get_latest.outputs.latest != 'null' && steps.check_files.outputs.files_exists == 'true' }}
               with:
                 valueFile: 'shonp40-${{ env.ID }}/umbrel-app.yml'
                 changes: |
