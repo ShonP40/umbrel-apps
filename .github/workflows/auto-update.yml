@@ -22,6 +22,7 @@ jobs:
         needs: generateInputPaths
         runs-on: ubuntu-latest
         strategy:
+            max-parallel: 1
             fail-fast: false
             matrix:
                 path: ${{ fromJson(needs.generateInputPaths.outputs.matrix) }}
