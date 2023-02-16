@@ -15,4 +15,4 @@ If you're experiencing issues with the current apps listed on this repo, please 
 # Forks
 You're more than welcome to fork this repo and host the apps you need on it for your own personal use
 
-However, if you plan on keeping using the auto updaters on your fork, please leave credits to this repo in your main `README.md` file
+However, if you plan on keeping using the auto updater on your fork, please leave credits to this repo in your main `README.md` file
