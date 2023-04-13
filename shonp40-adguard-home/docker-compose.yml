@@ -6,7 +6,7 @@ services:
       APP_PORT: 3000
       PROXY_AUTH_ADD: 'false'
   server:
-    image: adguard/adguardhome:v0.107.27@sha256:09c491f2bbd5d175d671f34ef485283ddc1c8c08435d652ae583b7be3d941be0
+    image: adguard/adguardhome:v0.107.28@sha256:ad42524403004e643297231ec60f0ac98afb609b0983515764678435ba4e8a4f
     ports:
       - 53:53/tcp
       - 53:53/udp
