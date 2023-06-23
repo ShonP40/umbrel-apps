@@ -5,7 +5,7 @@ services:
       APP_HOST: $APP_OPENSPEEDTEST_IP
       APP_PORT: 3000
   server:
-    image: openspeedtest/latest:v0.0.1@sha256:6d5a39cb0b2b2d505eefcb07f5c3f85e6655521837223e3bce7fe1d114f0404b
+    image: openspeedtest/latest:v2.0.0@sha256:d4d62f4b7d857787befa7a7c8be3bfc9ac5ee207b2fd01d84ee9f3b13fb90637
     networks:
       default:
         ipv4_address: $APP_OPENSPEEDTEST_IP
