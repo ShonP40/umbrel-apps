@@ -2,7 +2,7 @@ manifestVersion: 1
 id: shonp40-openspeedtest
 category: Networking
 name: OpenSpeedTest
-version: v2.0.1
+version: v2.0.2
 tagline: Free & Open-Source HTML5 Network Performance Estimation Tool
 description: OpenSpeedTest is a Free and Open-Source HTML5 Network Performance Estimation Tool Written in Vanilla Javascript and only uses built-in Web APIs like XMLHttpRequest (XHR), HTML, CSS, JS, & SVG.
 developer: OpenSpeedTest
