@@ -2,7 +2,7 @@ manifestVersion: 1
 id: shonp40-portainer
 category: Management
 name: Portainer
-version: 2.19.0
+version: 2.19.1
 tagline: Deploy, configure, troubleshoot and secure containers in minutes
 description: Portainer is a simple GUI for Docker that allows you to deploy, configure, troubleshoot and secure containers in minutes.
 developer: Portainer
