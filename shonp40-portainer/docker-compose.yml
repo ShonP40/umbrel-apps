@@ -5,7 +5,7 @@ services:
       APP_HOST: $APP_PORTAINER_IP
       APP_PORT: 9000
   server:
-    image: portainer/portainer-ce:2.19.3@sha256:eedfaee91bcb43025c072278ada094a548e2ce27ecd64db83a2ce6cf172489e9
+    image: portainer/portainer-ce:2.19.4@sha256:b11ff04445d219d77e41fd3d09419c192dffbb41d68ac1b25e0bc2c7c4686d40
     command: '-H unix:///var/run/docker.sock'
     environment:
       - VIRTUAL_PORT=9000
