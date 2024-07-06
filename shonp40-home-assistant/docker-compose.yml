@@ -6,7 +6,7 @@ services:
       APP_PORT: 8123
       PROXY_AUTH_ADD: 'false'
   server:
-    image: homeassistant/home-assistant:2024.7.0@sha256:4c2400f34d42c5fed9e2443a5a41db01316323b0564701f3336411bcd2ff9c88
+    image: homeassistant/home-assistant:2024.7.1@null
     volumes:
       - ${APP_DATA_DIR}/data:/config
       - /run/dbus:/run/dbus:ro
