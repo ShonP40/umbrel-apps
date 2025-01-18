@@ -5,7 +5,7 @@ services:
       APP_HOST: $APP_ESPHOME_IP
       APP_PORT: 6052
   server:
-    image: esphome/esphome:2024.12.3@null
+    image: esphome/esphome:2024.12.4@sha256:fb17727746ec9c15394b3371da47fa4c4e2f813103ef602d9b30de38fbd725ae
     volumes:
       - ${APP_DATA_DIR}/data:/config
       - /dev:/dev
